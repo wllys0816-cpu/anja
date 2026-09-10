@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A special message just for you 💕">
+    <title>💕 For You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Stars + Petals Canvas -->
+    <canvas id="fx-canvas"></canvas>
+
+    <!-- Ambient Glow Orbs -->
+    <div class="ambient-orbs">
+        <div class="a-orb a-orb-1"></div>
+        <div class="a-orb a-orb-2"></div>
+        <div class="a-orb a-orb-3"></div>
+        <div class="a-orb a-orb-4"></div>
+    </div>
+
+    <!-- Cursor Trail -->
+    <div id="cursor-trail"></div>
+
+    <!-- Scroll Container -->
+    <main id="scroll-container" class="scroll-container">
+
+        <!-- ===== SCENE 1: HERO ===== -->
+        <section id="scene-0" class="scene scene-hero" data-scene="0">
+            <div class="hero-content">
+                <div class="hero-sparkle-ring">
+                    <div class="sparkle-ring"></div>
+                    <span class="hero-moon">🌙</span>
+                </div>
+                <div class="hero-badge fade-element">
+                    <span class="badge-pulse"></span>
+                    sebuah pesan spesial untukmu
+                </div>
+                <h1 class="hero-title">
+                    <span class="fade-element" data-delay="200">Hai,</span>
+                    <span class="hero-name fade-element" data-delay="500" id="hero-name">Kamu</span>
+                </h1>
+                <p class="hero-quote fade-element" data-delay="800">
+                    <span class="quote-mark">"</span>Di antara jutaan bintang di langit,<br>
+                    kamu yang paling bersinar di mataku.<span class="quote-mark">"</span>
+                </p>
+                <div class="scroll-indicator fade-element" data-delay="1200">
+                    <span>scroll perlahan</span>
+                    <div class="scroll-line">
+                        <div class="scroll-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SCENE 2: REASONS ===== -->
+        <section id="scene-1" class="scene scene-reasons" data-scene="1">
+            <div class="reasons-wrap">
+                <p class="scene-label fade-element">tentang kamu</p>
+                <h2 class="scene-heading fade-element" data-delay="100">
+                    Hal-hal yang bikin aku <em>jatuh hati</em>
+                </h2>
+                <div class="reason-grid">
+                    <div class="r-card fade-element" data-delay="200">
+                        <div class="r-card-glow"></div>
+                        <span class="r-num">01</span>
+                        <span class="r-icon">✨</span>
+                        <p class="r-text">Senyummu — satu-satunya alasan aku percaya bahwa keajaiban itu nyata.</p>
+                    </div>
+                    <div class="r-card fade-element" data-delay="350">
+                        <div class="r-card-glow"></div>
+                        <span class="r-num">02</span>
+                        <span class="r-icon">🌙</span>
+                        <p class="r-text">Suaramu — lebih indah dari lagu apapun yang pernah aku dengar.</p>
+                    </div>
+                    <div class="r-card fade-element" data-delay="500">
+                        <div class="r-card-glow"></div>
+                        <span class="r-num">03</span>
+                        <span class="r-icon">🦋</span>
+                        <p class="r-text">Kebaikanmu — cara kamu peduli ke semua orang di sekitarmu.</p>
+                    </div>
+                    <div class="r-card fade-element" data-delay="650">
+                        <div class="r-card-glow"></div>
+                        <span class="r-num">04</span>
+                        <span class="r-icon">🌸</span>
+                        <p class="r-text">Kehadiranmu — yang bikin semuanya terasa lebih hangat dan aman.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SCENE 3: LOVE LETTER ===== -->
+        <section id="scene-2" class="scene scene-letter" data-scene="2">
+            <div class="letter-wrap">
+                <div class="letter-glass">
+                    <div class="letter-glass-shimmer"></div>
+                    <div class="letter-header fade-element">
+                        <span class="letter-icon">💌</span>
+                        <span class="letter-date" id="letter-date"></span>
+                    </div>
+                    <div class="letter-body">
+                        <p class="l-line fade-element" data-delay="200">Mungkin kamu nggak pernah sadar...</p>
+                        <p class="l-line fade-element" data-delay="400">tapi setiap kali kamu ada di dekatku,</p>
+                        <p class="l-line fade-element" data-delay="600">waktu terasa berhenti.</p>
+                        <p class="l-line fade-element" data-delay="900">&nbsp;</p>
+                        <p class="l-line fade-element" data-delay="1100">Aku suka semua hal tentangmu —</p>
+                        <p class="l-line fade-element" data-delay="1300">bahkan hal-hal kecil yang kamu anggap biasa.</p>
+                        <p class="l-line fade-element" data-delay="1600">&nbsp;</p>
+                        <p class="l-line fade-element" data-delay="1800">Jadi ini dia, hal yang selama ini aku pendam:</p>
+                    </div>
+                    <div class="confession-reveal">
+                        <div class="typewriter-box">
+                            <h2 class="typed-text" id="typed-text"></h2>
+                            <span class="tw-cursor" id="tw-cursor">|</span>
+                        </div>
+                    </div>
+                    <p class="letter-sign fade-element" data-delay="4000" id="letter-sign">
+                        — dari seseorang yang selalu mikirin kamu 💌
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SCENE 4: THE QUESTION ===== -->
+        <section id="scene-3" class="scene scene-question" data-scene="3">
+            <div class="q-wrap">
+                <div class="q-hearts-bg" id="q-hearts-bg"></div>
+                <div class="q-ring fade-element">
+                    <div class="ring-orbit">
+                        <div class="orbit-particle"></div>
+                        <div class="orbit-particle p2"></div>
+                        <div class="orbit-particle p3"></div>
+                    </div>
+                    <span class="ring-icon">💍</span>
+                </div>
+                <h2 class="q-title fade-element" data-delay="200">Mau nggak...</h2>
+                <h2 class="q-title-big fade-element" data-delay="400">jadi pacar aku?</h2>
+                <p class="q-emoji fade-element" data-delay="600">🥺👉👈</p>
+                <div class="q-buttons fade-element" data-delay="800" id="q-buttons">
+                    <button class="btn-yes" id="btn-yes" onclick="handleYes()">
+                        <span class="btn-yes-bg"></span>
+                        <span class="btn-yes-label">Mau! 💕</span>
+                    </button>
+                    <button class="btn-no" id="btn-no" onmouseenter="dodgeButton()" onclick="dodgeButton()">
+                        Nggak deh
+                    </button>
+                </div>
+                <p class="dodge-msg" id="dodge-msg"></p>
+            </div>
+        </section>
+
+        <!-- ===== SCENE 5: CELEBRATION ===== -->
+        <section id="scene-celebrate" class="scene scene-celebrate hidden-scene">
+            <div class="celeb-wrap" id="celeb-wrap">
+                <h2 class="celeb-title">YEAY! 🎉</h2>
+                <p class="celeb-sub">Kita official sekarang!</p>
+                <div class="celeb-date" id="celeb-date"></div>
+                <div class="celeb-couple">
+                    <span class="c-left">👩</span>
+                    <span class="c-heart">❤️</span>
+                    <span class="c-right">👨</span>
+                </div>
+                <p class="celeb-promise">
+                    Aku janji bakal jaga kamu,<br>
+                    sayang kamu, dan selalu ada buat kamu. ✨
+                </p>
+                <button class="btn-yes btn-confetti" onclick="replayConfetti()">
+                    <span class="btn-yes-bg"></span>
+                    <span class="btn-yes-label">🎊 Confetti lagi!</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Music Toggle -->
+    <button class="music-btn" id="music-btn" onclick="toggleMusic()" title="Toggle Musik">
+        <span id="music-icon">🎵</span>
+        <div class="music-wave" id="music-wave">
+            <span></span><span></span><span></span><span></span>
+        </div>
+    </button>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+    </div>
+
+    <!-- Nav Dots -->
+    <nav class="nav-dots" id="nav-dots">
+        <button class="nav-dot active" data-i="0" onclick="scrollToScene(0)"><span></span></button>
+        <button class="nav-dot" data-i="1" onclick="scrollToScene(1)"><span></span></button>
+        <button class="nav-dot" data-i="2" onclick="scrollToScene(2)"><span></span></button>
+        <button class="nav-dot" data-i="3" onclick="scrollToScene(3)"><span></span></button>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
